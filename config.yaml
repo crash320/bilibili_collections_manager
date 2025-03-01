@@ -1,0 +1,21 @@
+# 网络请求配置
+request:
+  max_retries: 3
+  retry_delay: 5
+  timeout: 30
+
+# 下载配置  
+download:
+  max_concurrent: 2
+  chunk_size: 524288 # 1MB
+  video_quality: 80  # 可选值：16(360P), 32(480P), 64(720P), 80(1080P), 112(1080P+), 116(1080P60), 120(4K)
+  
+# 缓存配置
+cache:
+  base_dir: "data"
+  
+# 日志配置
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "bilibili_collector.log" 
