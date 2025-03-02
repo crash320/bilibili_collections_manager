@@ -18,4 +18,10 @@ cache:
 logging:
   level: "INFO"
   format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-  file: "bilibili_collector.log" 
+  file: "bilibili_collector.log"
+
+# Edge浏览器配置
+edge:
+  debug_shortcut: "C:\\Users\\Public\\Desktop\\msedge_debug.lnk"
+  driver_path: "D:\\04_Tools\\edgedriver_133.0.3065.82_win64\\msedgedriver.exe"
+  debug_port: 9222

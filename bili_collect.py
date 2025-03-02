@@ -107,13 +107,13 @@ class BilibiliCollector:
 
     def login(self):
         """登录B站获取cookie"""
-        os.startfile("C:\\Users\\Public\\Desktop\\msedge_debug.lnk")
+        os.startfile(self.config['edge']['debug_shortcut'])
         options = Options()  # 得到edge的设置
         options.add_experimental_option(
-            "debuggerAddress", "127.0.0.1:9222")  # 配置浏览器的端口地址
+            "debuggerAddress", f"127.0.0.1:{self.config['edge']['debug_port']}")  # 配置浏览器的端口地址
         # options.add_experimental_option('excudeSwitches',['enable-automation'])
         driver = webdriver.Edge(service=Service(
-            "D:\\04_Tools\\edgedriver_133.0.3065.82_win64\\msedgedriver.exe"), options=options)  # 浏览器驱动的放置地址
+            self.config['edge']['driver_path']), options=options)  # 浏览器驱动的放置地址
         
         driver.get("https://passport.bilibili.com/login")
         time.sleep(3)
